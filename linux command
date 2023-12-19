@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Define the command version
+VERSION="v0.1.0"
+
+# Function to display the manual page
+show_manual() {
+    echo "internsctl - Custom Linux Command"
+    echo "Version: $VERSION"
+    echo ""
+    echo "DESCRIPTION:"
+    echo "  internsctl is a custom Linux command for performing specific operations."
+    echo ""
+    echo "USAGE:"
+    echo "  internsctl [OPTIONS]"
+    echo ""
+    echo "OPTIONS:"
+    echo "  --help    Display this help message"
+    echo "  --version Display the version of the command"
+    echo ""
+    # Add additional sections and descriptions as needed for specific operations
+}
+
+# Function to display command help
+show_help() {
+    echo "Usage: internsctl [OPTIONS]"
+    echo ""
+    echo "Options:"
+    echo "  --help    Display this help message"
+    echo "  --version Display the version of the command"
+    echo ""
+    # Add examples and use cases for specific operations
+}
+
+# Main script logic
+case "$1" in
+    --help)
+        show_help
+        ;;
+    --version)
+        echo "internsctl $VERSION"
+        ;;
+    *)
+        show_manual
+        ;;
+esac
